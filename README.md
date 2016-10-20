@@ -66,4 +66,4 @@ git checkout master
 git checkout behavior-example
 # Now it works as it should
 ```
-refer: http://stackoverflow.com/questions/18833617/why-does-git-checkout-remote-branchname-not-create-new-tracking-branch/18995918#18995918
+refer to: http://stackoverflow.com/questions/18833617/why-does-git-checkout-remote-branchname-not-create-new-tracking-branch/18995918#18995918
