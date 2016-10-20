@@ -46,3 +46,24 @@ git checkout folder1a
 ```
 i don't know why this is happening but it looks like `folder` and `branches`
 should not have the same name.
+
+# possible solution
+to avoid this problem, you have 2 options.
+1. you can set `better` branch-names like `wip/folder`.
+2. after cloning the repo, checkout the branch with option `-t
+	 origin/branchnam`, this will write the right config in `.git/config`. You
+	 need to do this just for the first time. After that the next checkouts will
+	 work as expected.
+
+```bash
+git clone https://github.com/yourusername/behavior-example.git
+cd behavior-example
+git checkout -t origin/behavior-example
+git branch
+# Changed to branch behavior-example
+git checkout master
+# back in master branch
+git checkout behavior-example
+# Now it works as it should
+```
+refer: http://stackoverflow.com/questions/18833617/why-does-git-checkout-remote-branchname-not-create-new-tracking-branch/18995918#18995918
